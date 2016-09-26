@@ -1,4 +1,10 @@
-p.b{
-    color: blue;
-    font-size: 50px;
+.header{
+    background:#FF0000;
+    padding-bottom:10px;
+    border:1px;
+    margin-bottom:10px;
+}
+.main{
+    background:#ff00ff;
+    padding:5px;
 }
