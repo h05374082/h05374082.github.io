@@ -10,23 +10,24 @@
 
 	<link rel="stylesheet" href="./css/bootstrap.css">
 	<link rel="stylesheet" href="./css/my.css">
+	<link rel="stylesheet" href="./css/game.css">
 </head>
 
 <body background="./img/bg.gif">
-
 	<!-- 導覽例-->
 	<div class="navbar-header">
 		<div class="container-fluid">
 			<nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-inverse bg-faded">
 
 				<div class="container">
-					<p class="navbar-brand m-b-0">Home</p>
+					<p class="navbar-brand m-b-0" >數獨</p>
+
 					<ul class="nav navbar-nav pull-md-right">
 						<li class="nav-item ">
-							<a class="nav-link active" href="./index.html">Home</a>
+							<a class="nav-link" href="./index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="./game.html">Game</a>
+							<a class="nav-link active" href="./game.html">Game</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./travel.html">Travel</a>
@@ -37,34 +38,35 @@
 		</div>
 	</div>
 	<!-- 內文 -->
-	<div class="row blank1">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<div class="container">
-				<div width="100%">
-                    <a id="output" href="./game.html">
-					<img id="imgid" src="./img/h01.jpg" width="100%">
-                    </a>
-				</div>
-                <div>
-                <table class="table table-bordered table-inverse">
-                    <thead>
-                    <tr>
-                        <th class="on"  width="50%" data-index="1">數獨遊戲</th>
-                        <th class="off"  data-index="2">旅遊日誌</th>                       
-                    </tr>
-                    </thead>
-                </table>
-                </div>
-			</div>
+	<div id="input" class="container blank1">
+		<div class="form-group">
+			<label for="exampleSelect1">請選擇Level</label>
+			<select class="form-control" id="level">
+				<option value=1>1</option>
+				<option value=2>2</option>
+				<option value=3>3</option>
+				<option value=4>4</option>
+				<option value=5>5</option>
+			</select>
 		</div>
-		<div class="col-md-4"></div>
 	</div>
+	<div class="btn-group2 container">
+		<button type="button" class="btn btn-info" onclick="sd.init();">開始</button>
+		<button type="button" class="btn btn-info" onclick="sd.checkRes();">完成</button>
+		<button type="button" class="btn btn-info" onclick="sd.again();">重玩本局</button>
+	</div>
+	<div id="output" class="container blank2"></div>
+
+	<!--頁尾-->
+
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/tether.min.js"></script>
 	<script src="./js/bootstrap.js"></script>
-	<script src="./js/index.js"></script>
+	<script src="./js/game.js"></script>
+	<script>
+		var sd = new SD;
+		</script>
 </body>
 
 </html>
