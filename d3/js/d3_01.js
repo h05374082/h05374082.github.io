@@ -32,7 +32,7 @@ $rect.bind('click',function(){
         k++;
     }
 
-    if(k==24){
+    if(k==25){
         console.log("complete");
         $('#x').show();
     }
